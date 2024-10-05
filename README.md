@@ -6,6 +6,9 @@
 
 Este proyecto es un clon de la landing page de Tesla, creado con el objetivo de practicar y demostrar habilidades en el desarrollo web. Utiliza **Astro** para la creación de sitios estáticos, **Tailwind CSS** para estilos rápidos y personalizados, y un poco de **JavaScript** para implementar funcionalidades interactivas.
 
+## Enlace de la landing page desplegada
+Podras ver la landing page desplegada en [este enlace](https://tesla-clone-hcoroneldev.netlify.app/).
+
 ## Estructura del Proyecto
 
 Dentro de tu proyecto Astro, verás la siguiente estructura de carpetas y archivos:
