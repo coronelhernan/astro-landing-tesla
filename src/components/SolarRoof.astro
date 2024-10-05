@@ -1,0 +1,49 @@
+---
+import Section from "./Section.astro";
+
+const {
+  color = 'black', title = 'Solar Roof', data = 'Produce Clean Energy From Your Roof',
+  buttons = {
+    primary: {
+      label: 'Order Now',
+      href: '#'
+    },
+    secondary: {
+      label: 'Learn More',
+      href: '#'
+    }
+  }
+} = Astro.props;
+---
+
+<Section
+  color={color}
+  id="section-solar-roof"
+>
+  <div slot="header" class="flex flex-col items-center gap-2">
+    <h1 class="text-5xl font-semibold text-white">{title}</h1>
+    <p class="text-white text-2xl font-semibold">{data}</p>
+  </div>
+
+  <div slot="footer" class="gap-x-4 flex mx-auto">
+    <a
+      class="bg-custom-blue text-sm rounded font-medium text-white px-24 py-3 inline-block transition-opacity duration-300 hover:opacity-80"
+      href={buttons.primary.href}>
+      {buttons.primary.label}
+    </a>
+
+    <a
+      class="bg-white text-sm rounded font-medium text-gray-800 px-24 py-3 inline-block transition-opacity duration-300 hover:opacity-80 hover:bg-gray-200"
+      href={buttons.secondary.href}>
+      {buttons.secondary.label}
+    </a>
+  </div>
+
+  <img
+    slot="background"
+    alt="Solar Roof img"
+    class="h-full w-full object-cover object-center"
+    src="Solar-Roof-Img.avif"
+    id="bg-image-models"
+  />
+</Section>

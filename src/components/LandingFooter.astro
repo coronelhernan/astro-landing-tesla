@@ -1,0 +1,16 @@
+---
+import FooterMenu from './FooterMenu.astro';
+import FooterContent from './FooterContent.astro'
+const { itemsHref = '#', urlPrivacity = 'Terms apply', urlSavings = 'gas savings ' } = Astro.props;
+---
+
+<footer
+  class="bg-black py-10 relative px-10 flex flex-col items-center justify-center w-full text-gray-200 space-y-16"
+>
+
+  <FooterContent itemsHref={itemsHref} urlPrivacity={urlPrivacity} urlSavings={urlSavings} /> 
+
+  <div class="mt-4 flex items-center justify-center">
+    <FooterMenu />
+  </div>
+</footer>

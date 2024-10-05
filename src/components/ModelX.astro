@@ -1,0 +1,52 @@
+---
+import Section from "./Section.astro";
+
+const {
+  color = 'black', title = 'Model X', subtitle = 'From $34,990³', 
+  textInfo = 'After Federal Tax Credit $7,500', textInfo2 = 'and Est. Gas Savings $6,500',
+  buttons = {
+    primary: {
+      label: 'Order Now',
+      href: '#'
+    },
+    secondary: {
+      label: 'Demo Drive',
+      href: '#'
+    }
+  }
+} = Astro.props;
+---
+
+<Section
+  color={color}
+  id="section-model-x"
+>
+  <div slot="header" class="flex flex-col items-center gap-0">
+    <h1 class="text-5xl font-semibold text-white">{title}</h1>
+    <a class="text-2xl font-medium text-white  space-y-4">{subtitle}</a>
+    <p class="text-white font-semibold underline underline-offset-4">{textInfo}</p>
+    <p class="text-white font-semibold underline underline-offset-4">{textInfo2}</p>
+  </div>
+
+  <div slot="footer" class="gap-x-4 flex mx-auto">
+    <a
+      class="bg-custom-blue text-sm rounded font-medium text-white px-24 py-3 inline-block transition-opacity duration-300 hover:opacity-80"
+      href={buttons.primary.href}>
+      {buttons.primary.label}
+    </a>
+
+    <a
+      class="bg-white text-sm rounded font-medium text-gray-800 px-24 py-3 inline-block transition-opacity duration-300 hover:opacity-80 hover:bg-gray-200"
+      href={buttons.secondary.href}>
+      {buttons.secondary.label}
+    </a>
+  </div>
+
+  <img
+    slot="background"
+    alt="Model x img"
+    class="h-full w-full object-cover object-center"
+    src="Model-X.avif"
+    id="bg-image-models"
+  />
+</Section>

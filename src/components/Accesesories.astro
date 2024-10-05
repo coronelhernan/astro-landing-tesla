@@ -1,0 +1,38 @@
+---
+import Section from "./Section.astro";
+
+const {
+  color = 'black', title = 'Accessories',
+  buttons = {
+    primary: {
+      label: 'Shop Now',
+      href: '#'
+    }
+  }
+} = Astro.props;
+---
+
+<Section
+  color={color}
+  id="section-accessories"
+>
+  <div slot="header" class="flex flex-col items-center gap-2">
+    <h1 class="text-5xl font-semibold text-white">{title}</h1>
+  </div>
+
+  <div slot="footer" class="gap-x-4 flex mx-auto">
+    <a
+      class="bg-custom-blue text-sm rounded font-medium text-white px-24 py-3 inline-block transition-opacity duration-300 hover:opacity-80"
+      href={buttons.primary.href}>
+      {buttons.primary.label}
+    </a>
+  </div>
+
+  <img
+    slot="background"
+    alt="Accessories img"
+    class="h-full w-full object-cover object-center"
+    src="Accessories-Img.avif"
+    id="bg-image-models"
+  />
+</Section>
